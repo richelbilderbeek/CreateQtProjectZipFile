@@ -25,7 +25,7 @@ int ribi::CreateQtProjectZipFile::MenuDialog::ExecuteSpecific(const std::vector<
   if (argc == 1)
   {
     std::cout << this->GetHelp() << '\n';
-    return 1;
+    return 0;
   }
 
   std::string folder;

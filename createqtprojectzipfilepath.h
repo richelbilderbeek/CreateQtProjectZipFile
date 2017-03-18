@@ -1,23 +1,3 @@
-//---------------------------------------------------------------------------
-/*
-CreateQtProjectZipFile, tool to create a zip file from a Qt project
-Copyright (C) 2012-2015 Richel Bilderbeek
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.See the
-GNU General Public License for more details.
-You should have received a copy of the GNU General Public License
-along with this program.If not, see <http://www.gnu.org/licenses/>.
-*/
-//---------------------------------------------------------------------------
-//From http://www.richelbilderbeek.nl/ToolCreateQtProjectZipFile.htm
-//---------------------------------------------------------------------------
 #ifndef CREATEQTPROJECTZIPFILEPATH_H
 #define CREATEQTPROJECTZIPFILEPATH_H
 
@@ -39,27 +19,39 @@ struct Path
   /// - m_filename: toolcreatezipfiledesktop.pro
   Path(const std::string& s);
 
-  Path(const std::string& main_folder,const std::string& sub_folder, const std::string& filename);
+  Path(
+    const std::string& main_folder,
+    const std::string& sub_folder,
+    const std::string& filename
+  );
 
   ///Extract the filename from a path.
   ///Examples:
-  ///-'Projects/ProjectRichelBilderbeek/ProjectRichelBilderbeekDesktop.pro' -> 'ProjectRichelBilderbeekDesktop.pro'
-  ///-'Tools/ToolCreateQtProjectZipFile/ToolCreateQtProjectZipFileDesktop.pro' -> 'ToolCreateQtProjectZipFileDesktop.pro'
+  ///-'Projects/ProjectRichelBilderbeek/ProjectRichelBilderbeekDesktop.pro'
+  ///  -> 'ProjectRichelBilderbeekDesktop.pro'
+  ///-'Tools/ToolCreateQtProjectZipFile/ToolCreateQtProjectZipFileDesktop.pro'
+  ///  -> 'ToolCreateQtProjectZipFileDesktop.pro'
   static std::string ExtractFilename(const std::string& filename);
 
   ///Extract the main folder from a path.
   ///Examples:
-  ///-'Projects/ProjectRichelBilderbeek/ProjectRichelBilderbeekDesktop.pro' -> 'Projects'
-  ///-'Tools/ToolCreateQtProjectZipFile/ToolCreateQtProjectZipFileDesktop.pro' -> 'Tools'
+  ///-'Projects/ProjectRichelBilderbeek/ProjectRichelBilderbeekDesktop.pro'
+  ///  -> 'Projects'
+  ///-'Tools/ToolCreateQtProjectZipFile/ToolCreateQtProjectZipFileDesktop.pro'
+  ///  -> 'Tools'
   static std::string ExtractMainFolder(const std::string& filename);
 
   ///Extract the sub-folder from a path.
   ///Examples:
-  ///-'Projects/ProjectRichelBilderbeek/ProjectRichelBilderbeekDesktop.pro' -> 'ProjectRichelBilderbeek'
-  ///-'Tools/ToolCreateQtProjectZipFile/ToolCreateQtProjectZipFileDesktop.pro' -> 'ToolCreateQtProjectZipFile'
+  ///-'Projects/ProjectRichelBilderbeek/ProjectRichelBilderbeekDesktop.pro'
+  ///  -> 'ProjectRichelBilderbeek'
+  ///-'Tools/ToolCreateQtProjectZipFile/ToolCreateQtProjectZipFileDesktop.pro'
+  ///  -> 'ToolCreateQtProjectZipFile'
   static std::string ExtractSubFolder(const std::string& filename);
 
-  ///Get the sub folder, e.g. 'ProjectRichelBilderbeekDesktop.pro', 'ToolCreateQtProjectZipFileDesktop.pro'
+  ///Get the sub folder,
+  /// e.g. 'ProjectRichelBilderbeekDesktop.pro',
+  /// 'ToolCreateQtProjectZipFileDesktop.pro'
   const std::string& GetFilename() const { return m_filename; }
 
   ///Get the main folder, e.g. 'Projects', 'Tools'
