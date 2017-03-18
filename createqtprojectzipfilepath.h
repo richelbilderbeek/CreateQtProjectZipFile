@@ -80,9 +80,6 @@ struct Path
   ///Set the sub folder, e.g. 'ProjectRichelBilderbeek', 'ToolCreateQtProjectZipFile'
   void SetSubFolder(const std::string& s);
 
-  ///Test this class
-  static void Test() noexcept;
-
   ///Converts a Path to a string
   ///For example,
   /// - m_main_folder: Tools

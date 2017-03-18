@@ -34,9 +34,6 @@ ribi::QtCreateQtProjectZipFileMenuDialog::QtCreateQtProjectZipFileMenuDialog(QWi
   QtHideAndShowDialog(parent),
   ui(new Ui::QtCreateQtProjectZipFileMenuDialog)
 {
-  #ifndef NDEBUG
-  Test();
-  #endif
   ui->setupUi(this);
 }
 
@@ -71,15 +68,3 @@ void ribi::QtCreateQtProjectZipFileMenuDialog::on_button_quit_clicked() noexcept
 {
   close();
 }
-
-#ifndef NDEBUG
-void ribi::QtCreateQtProjectZipFileMenuDialog::Test() noexcept
-{
-  {
-    static bool is_tested{false};
-    if (is_tested) return;
-    is_tested = true;
-  }
-  QtCreateQtProjectZipFileMainDialog d;
-}
-#endif

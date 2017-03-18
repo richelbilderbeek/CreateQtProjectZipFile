@@ -31,7 +31,7 @@ namespace ribi {
 
 class QtCreateQtProjectZipFileMainDialog : public QtHideAndShowDialog
 {
-  Q_OBJECT
+  Q_OBJECT //!OCLINT
 
 public:
   explicit QtCreateQtProjectZipFileMainDialog(QWidget *parent = 0) noexcept;
@@ -50,10 +50,6 @@ private:
   void CreateScript(const std::string source_folder) noexcept;
 
   void keyPressEvent(QKeyEvent *) noexcept;
-
-  #ifndef NDEBUG
-  static void Test() noexcept;
-  #endif
 };
 
 } //~namespace ribi

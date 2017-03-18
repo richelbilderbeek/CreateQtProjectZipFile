@@ -1,13 +1,13 @@
 INCLUDEPATH += \
-    ../../Tools/ToolCreateQtProjectZipFile
+    $$PWD
 
 SOURCES += \
-    ../../Tools/ToolCreateQtProjectZipFile/createqtprojectzipfilemenudialog.cpp \
-    ../../Tools/ToolCreateQtProjectZipFile/createqtprojectzipfilepath.cpp \
-    ../../Tools/ToolCreateQtProjectZipFile/createqtprojectzipfilemaindialog.cpp
+    $$PWD/createqtprojectzipfilemenudialog.cpp \
+    $$PWD/createqtprojectzipfilepath.cpp \
+    $$PWD/createqtprojectzipfilemaindialog.cpp
 
 
 HEADERS  += \
-    ../../Tools/ToolCreateQtProjectZipFile/createqtprojectzipfilemenudialog.h \
-    ../../Tools/ToolCreateQtProjectZipFile/createqtprojectzipfilepath.h \
-    ../../Tools/ToolCreateQtProjectZipFile/createqtprojectzipfilemaindialog.h
+    $$PWD/createqtprojectzipfilemenudialog.h \
+    $$PWD/createqtprojectzipfilepath.h \
+    $$PWD/createqtprojectzipfilemaindialog.h

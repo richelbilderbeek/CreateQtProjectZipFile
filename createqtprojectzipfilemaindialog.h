@@ -13,10 +13,6 @@ struct CreateQtProjectZipFileMainDialog
 
   private:
   const std::string m_script;
-
-  #ifndef NDEBUG
-  static void Test() noexcept;
-  #endif
 };
 
 } //~namespace ribi
