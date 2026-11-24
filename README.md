@@ -1,5 +1,7 @@
 # CreateQtProjectZipFile
 
+[Go to the nicely rendered website](https://richelbilderbeek.github.io/CreateQtProjectZipFile/).
+
 Branch|[![Travis CI logo](TravisCI.png)](https://travis-ci.org)|[![Codecov logo](Codecov.png)](https://www.codecov.io)
 ---|---|---
 master|[![Build Status](https://travis-ci.org/richelbilderbeek/CreateQtProjectZipFile.svg?branch=master)](https://travis-ci.org/richelbilderbeek/CreateQtProjectZipFile)|[![codecov.io](https://codecov.io/github/richelbilderbeek/CreateQtProjectZipFile/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/CreateQtProjectZipFile/branch/master)
